@@ -1,0 +1,23 @@
+@charset "utf-8";
+*{ margin:0px; padding:0px; list-style:none; }
+body,html{ font-size:12px;font-family:"微软雅黑","宋体",Arial, Helvetica, sans-serif; height:auto; background:#EEF8FA;}
+i{ font-style:normal; color:#999;}
+a{ text-decoration:none; color:#656565 }
+img{ border:none;}
+h1{ text-align:center; height:80px; line-height:80px; color:#f00; font-weight:normal;}
+input,select{vertical-align:middle;}
+
+.bodybg{position:fixed; width:100%;height:100%;}
+.loginbk{ width:390px; height:330px; background:url(../images/loginbg.png) no-repeat left top; position:absolute; left:50%; top:50%; margin:-165px 0 0 -195px;}
+.loginbk li label{ display:inline-block; text-align:right; width:80px; padding-right:5px; color:#009}
+.loginbk li{ margin-bottom:20px; padding-left:55px; position:relative; overflow:hidden;}
+.loginbk li i{ position:absolute; left:89px; top:12px;}
+.loginbk li .ipt{ width:288px;height:14px; padding:12px 0; line-height:14px;background-color:#ffffff; text-indent:34px; border:1px solid #cacaca;border-radius:3px;color:#a5a5a5; background-repeat:no-repeat; }
+.loginbk li .uname{ background-image:url(../images/login_03.png); background-position:8px center;}
+.loginbk li .upwd{ background-image:url(../images/login_06.png); background-position:8px center;}
+.loginbk li .ipt:hover{ background-color:#FFC}
+.loginbk li .vcode{ width:120px;}
+.loginbk li .on{background-color:#FFC}
+.butform{ background:#E22821; width:107px;height:38px;border:0; font-size:18px; color:#fff; border-radius:5px; cursor:pointer; box-shadow:0px 1px 5px #bbb;}
+#cod{ color:#ff0000; cursor:pointer; font-size:20px; vertical-align:middle; }
+.wimgs{ position:relative;}

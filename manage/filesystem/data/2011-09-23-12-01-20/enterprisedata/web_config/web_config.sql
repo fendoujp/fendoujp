@@ -1,0 +1,2 @@
+INSERT INTO web_config(id,s_name,s_name1,s_name2,s_keywords,s_keywords1,s_keywords2,s_language,s_time,s_count,s_mail_smtp,s_mail_from,s_mail_to,s_mail_user,s_mail_pwd,s_copyright,s_copyright1,s_copyright2,s_description,s_description1,s_description2,web_status)VALUES 
+(1,'网站名称中文','网站名称en','网站名称繁体','关键词','关键词en','关键词繁体','1',2011,1000,'务器','','','邮箱名','密码','版权信息','版权信息en','版权信息繁体','aa','aaa','aaaaa',0);

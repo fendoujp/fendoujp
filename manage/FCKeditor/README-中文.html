@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="100%"  border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><strong>------------FCKeditor 编辑器 使用指南--------------------------------</strong></td>
+  </tr>
+  <tr>
+    <td>第1步：请确定你已经具备了 php 运行的环境。</td>
+  </tr>
+  <tr>
+    <td>第2步：请解压压缩文件 然后配置目录如下：(从图中可以看出 我的根目录为：D:\myphp 而编辑器的目录为：D:\myphp\fckeditor_266)<br>
+    <img src="http://img.logoinlogo.com/fck1.gif"></td>
+  </tr>
+  <tr>
+    <td>第3步：把文件上传到你的空间</td>
+  </tr>
+  <tr>
+    <td>第4步：已经顺利完成</td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><strong>如何使用编辑器（php）</strong></td>
+  </tr>
+  <tr>
+    <td align="left" bgcolor="#FFFFFF"><strong>添加页面使用如下：<br>
+    php代码：</strong><br>
+    &lt;?php <br>
+    if($_POST[&quot;do&quot;]==&quot;add&quot;){//#########################################<br>
+$x_gj=&quot;en&quot;;<br>
+$bt=$class1-&gt;check_sr($_POST[&quot;bt&quot;],'i_no_h_j');<br>
+$type=7;<br>
+$jj=$class1-&gt;check_sr($_POST[&quot;jj&quot;],'');<br>
+$zz=$class1-&gt;check_sr($_POST[&quot;zz&quot;],'i_no_h_j');<br>
+$xb=$class1-&gt;check_sr($_POST[&quot;xb&quot;],'i_no_h_j');<br>
+$lxxx=$class1-&gt;check_sr($_POST[&quot;lxxx&quot;],'i_no_h_j');<br>
+$site=$class1-&gt;check_sr($_POST[&quot;site&quot;],'i_no_h_j');<br>
+$text=$class1-&gt;check_sr($_POST[&quot;text&quot;],'i_no_h_j');
+<p> <strong>if(get_magic_quotes_gpc()){$wznr = $_POST[&quot;FCKeditor1&quot;];}else{$wznr = $_POST[&quot;FCKeditor1&quot;] ;}<br>
+  $nr=str_replace(&quot;'&quot;,&quot;&quot;,$wznr);<br>
+  </strong><br>
+  $x_sj=&quot;&quot;;<br>
+  $x_ip=$class1-&gt;GetIP();;<br>
+  $x_zt=&quot;no&quot;;<br>
+  <br>
+  $sql1=&quot;insert into aa9_blog(x_gj,bt,type,jj,zz,xb,lxxx,site,text,nr,x_sj,x_ip,x_zt)<br>
+  values('&quot;.$x_gj.&quot;','&quot;.$bt.&quot;','&quot;.$type.&quot;','&quot;.$jj.&quot;','&quot;.$zz.&quot;','&quot;.$xb.&quot;','&quot;.$lxxx.&quot;','&quot;.$site.&quot;','&quot;.$text.&quot;','&quot;.<strong>$nr</strong>.&quot;',now(),'&quot;.$x_ip.&quot;','&quot;.$x_zt.&quot;')&quot;;<br>
+  $my1-&gt;my_q($sql1);<br>
+  <br>
+  $class1-&gt;my_error(&quot;Submit Article ---- OK &quot;,&quot;&quot;,&quot;http://www.yoursite.com/index.html&quot;,&quot;alert jump&quot;,true,false);<br>
+  /*######################################### */}<br>
+  ?&gt;<br>
+  <strong>HTML代码：</strong><br>
+  <br>
+  &lt;form id=&quot;xxx3&quot; class=&quot;xxx3&quot; name=&quot;xxx3&quot; method=&quot;POST&quot; action=&quot;add.php&quot; &gt;<br> 
+  <br>
+  <strong>&lt;input type=&quot;hidden&quot; id=&quot;FCKeditor1&quot; name=&quot;FCKeditor1&quot; value=&quot;&quot; style=&quot;display:none&quot; /&gt;<br>
+&lt;input type=&quot;hidden&quot; id=&quot;FCKeditor1___Config&quot; value=&quot;AutoDetectLanguage=false&amp;DefaultLanguage=en&amp;SkinPath=/fckeditor_266/editor/skins/silver/&quot; style=&quot;display:none&quot; /&gt;<br>
+&lt;iframe id=&quot;FCKeditor1___Frame&quot; src=&quot;/fckeditor_266/editor/fckeditor.html?InstanceName=FCKeditor1&amp;Toolbar=Default&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;</strong> <br>
+  &lt;input type=&quot;hidden&quot; name=&quot;do&quot; value=&quot;add&quot; /&gt;<br>
+&lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;Submit Now&quot;&gt;<br>
+
+&lt;/form&gt;</p>
+</td>
+  </tr>
+  <tr>
+    <td align="left" bgcolor="#FFFFFF"><strong>修改页面使用如下：<br>
+      php代码：<br>
+      </strong>&lt;?php<br>
+      if($do==&quot;up&quot; and is_int(intval($id))){<br>
+      $lb1=$class1-&gt;check_sr($_POST[&quot;sel1&quot;],'i_int');<br>
+      $lb2=$class1-&gt;check_sr($_POST[&quot;sel2&quot;],'i_int');<br>
+      $lb3=$class1-&gt;check_sr($_POST[&quot;sel3&quot;],'i_int');<br>
+      $lb4=$class1-&gt;check_sr($_POST[&quot;sel4&quot;],'i_int');<br>
+      $lb5=$class1-&gt;check_sr($_POST[&quot;sel5&quot;],'i_int');<br>
+      if($lb1&gt;0){$x_lb=$lb1;}if($lb2&gt;0){$x_lb=$lb2;}if($lb3&gt;0){$x_lb=$lb3;}if($lb4&gt;0){$x_lb=$lb4;}if($lb5&gt;0){$x_lb=$lb5;}
+      <p><strong> if(get_magic_quotes_gpc()){$wznr = $_POST[&quot;FCKeditor1&quot;];}else{$wznr = $_POST[&quot;FCKeditor1&quot;] ;}<br>
+  $nr=str_replace(&quot;'&quot;,&quot;&quot;,$wznr);</strong></p>
+      <p> $lb=$x_lb;<br>
+  $bt=$class1-&gt;check_sr($_POST[&quot;bt&quot;],'');<br>
+  $nr=$nr;<br>
+  $x_sj=$class1-&gt;check_sr($_POST[&quot;x_sj&quot;],'');<br>
+  <br>
+  <br>
+  $sql1=&quot;update aa9_mywz set lb='&quot;.$lb.&quot;',bt='&quot;.$bt.&quot;',nr='&quot;.<strong>$nr</strong>.&quot;',x_sj='&quot;.$x_sj.&quot;' where id=&quot;.$id;<br>
+  $my1-&gt;my_q($sql1);<br>
+  $class1-&gt;my_error(&quot;ok!&quot;,&quot;&quot;,$class1-&gt;get_file_name(&quot;return&quot;).&quot;?id=&quot;.$id,&quot;alert jump&quot;,true,false);<br>
+  }<br>
+  ?&gt;<br>
+  <strong>HTML代码：</strong><br>
+  &lt;form id=&quot;xxx3&quot; class=&quot;xxx3&quot; name=&quot;xxx3&quot; method=&quot;POST&quot; action=&quot;update.php&quot; &gt;  <br>
+  <strong>&lt;?php if(get_magic_quotes_gpc()){$nr = htmlspecialchars( stripslashes( $rs5[&quot;nr&quot;] ) ) ;}else{$nr = htmlspecialchars( $rs5[&quot;nr&quot;] ) ;}?&gt;<br>
+&lt;input type=&quot;hidden&quot; id=&quot;FCKeditor1&quot; name=&quot;FCKeditor1&quot; value=&quot;&lt;?php echo $nr;?&gt;&quot; style=&quot;display:none&quot; /&gt;<br>
+&lt;input type=&quot;hidden&quot; id=&quot;FCKeditor1___Config&quot; value=&quot;AutoDetectLanguage=false&amp;DefaultLanguage=en&amp;SkinPath=/fckeditor_266/editor/skins/silver/&quot; style=&quot;display:none&quot; /&gt;<br>
+&lt;iframe id=&quot;FCKeditor1___Frame&quot; src=&quot;/fckeditor_266/editor/fckeditor.html?InstanceName=FCKeditor1&amp;Toolbar=Default&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; <br>
+  <br>
+&lt;input type=&quot;hidden&quot; name=&quot;do&quot; value=&quot;up&quot; /&gt;</strong><br>
+
+&lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;修改&quot;&gt;<br>
+
+&lt;/form&gt;      </p>
+      </td>
+  </tr>
+  <tr>
+    <td align="left" bgcolor="#FFFFFF"><strong>编辑器还有更多的样式 可以从这里浏览：编辑器样式    :   http://www.yoursite.com/fckeditor_266/_samples_sdfsdf/default.html</strong></td>
+  </tr>
+  <tr>
+    <td align="left" bgcolor="#FFFFFF">外观欣赏：<br>
+	
+<img src="http://img.logoinlogo.com/fck2.gif">	
+<img src="http://img.logoinlogo.com/fck3.gif">	
+<img src="http://img.logoinlogo.com/fck4.gif">	
+<img src="http://img.logoinlogo.com/fck5.gif">	
+<img src="http://img.logoinlogo.com/fck6.gif">	
+
+	</td>
+  </tr>
+</table>
+</body>
+</html>

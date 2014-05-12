@@ -1,0 +1,6 @@
+INSERT INTO a_main(id,s_name,s_name1,s_name2,s_content,s_content1,s_content2,s_time,s_type,s_ok,s_order,s_img,s_img1,s_img2,s_img3,s_img4,s_img5,s_img6,s_img7,s_img8,s_img9,s_down,s_conj,s_conj1,s_conj2,classid,s_f1,s_f2,s_f3,s_f4,s_f5,s_f6,s_f7,s_read,s_author,s_author1,s_author2,userid)VALUES 
+(43,'测试标题','','','xxxxxxxxx','','',2011,'product',6,0,'','','','','','','','','','','','','','',39,'付加1','付加2','','','','','',0,'','','','0');
+INSERT INTO a_main(id,s_name,s_name1,s_name2,s_content,s_content1,s_content2,s_time,s_type,s_ok,s_order,s_img,s_img1,s_img2,s_img3,s_img4,s_img5,s_img6,s_img7,s_img8,s_img9,s_down,s_conj,s_conj1,s_conj2,classid,s_f1,s_f2,s_f3,s_f4,s_f5,s_f6,s_f7,s_read,s_author,s_author1,s_author2,userid)VALUES 
+(45,'新闻标题','','','','','',2011,'news',8,1,'','','','','','','','','','','','','','',41,'','','','','','','',0,'','','','0');
+INSERT INTO a_main(id,s_name,s_name1,s_name2,s_content,s_content1,s_content2,s_time,s_type,s_ok,s_order,s_img,s_img1,s_img2,s_img3,s_img4,s_img5,s_img6,s_img7,s_img8,s_img9,s_down,s_conj,s_conj1,s_conj2,classid,s_f1,s_f2,s_f3,s_f4,s_f5,s_f6,s_f7,s_read,s_author,s_author1,s_author2,userid)VALUES 
+(46,'测试','','','x','','',2011,'news',8,2,'','','','','','','','','','','','','','',41,'x','x','','','','','',0,'x','','','');

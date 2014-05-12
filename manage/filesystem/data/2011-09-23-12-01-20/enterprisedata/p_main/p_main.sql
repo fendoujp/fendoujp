@@ -1,0 +1,4 @@
+INSERT INTO p_main(id,s_name,s_name1,s_name2,s_content,s_content1,s_content2,s_time,s_type,s_ok,s_order,s_img,s_img1,s_img2,s_img3,s_img4,s_img5,s_img6,s_img7,s_img8,s_img9,s_down,s_conj,s_conj1,s_conj2,classid,s_price,s_price1,s_f1,s_f2,s_f3,s_f4,s_f5,s_f6,s_f7,s_read,userid)VALUES 
+(52,'测试222','','','','','',2011,'product',12,3,'','','','','','','','','','','','','','',37,'0','0','','','','','','','',0,'');
+INSERT INTO p_main(id,s_name,s_name1,s_name2,s_content,s_content1,s_content2,s_time,s_type,s_ok,s_order,s_img,s_img1,s_img2,s_img3,s_img4,s_img5,s_img6,s_img7,s_img8,s_img9,s_down,s_conj,s_conj1,s_conj2,classid,s_price,s_price1,s_f1,s_f2,s_f3,s_f4,s_f5,s_f6,s_f7,s_read,userid)VALUES 
+(53,'测试','','','','','',2011,'product',12,2,'','','','','','','','','','','','','','',37,'0','0','','','','','','','',0,'');

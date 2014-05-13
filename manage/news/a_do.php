@@ -1,7 +1,7 @@
 <? header("Content-Type: text/html; charset=utf-8");?>
 <?php session_start();?>
 <?php include("../../inc/publicfunction.php"); ?>
-<?php include("../fckeditor/fckeditor.php")?>
+<?php include("../FCKeditor/fckeditor.php")?>
 <?
 	function gv($text){
 		$id = gg("id");

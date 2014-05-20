@@ -1,7 +1,7 @@
 <? header("Content-Type: text/html; charset=utf-8");?>
 <?php session_start();?>
 <?php include("../../inc/publicfunction.php"); ?>
-<?php include("../FCKeditor/fckeditor.php")?>
+<?php include("../fckeditor/fckeditor.php")?>
 <?
 	function gv($text){
 		$id = gg("id");
@@ -15,8 +15,7 @@
 	function gpimg($text){
 		return (str_replace("../","",gp($text)));
 	}
-?>
-<?
+
 	$s_type = gg("s_type");
 	
 	$s_img = gg("s_img");
@@ -38,8 +37,7 @@
 	if(strstr($s_lan,"1")){$gb=1;}else{$gb=0;}
 	if(strstr($s_lan,"2")){$en=1;}else{$en=0;}
 	if(strstr($s_lan,"3")){$ft=1;}else{$ft=0;}	
-?>
-<?
+
 	if (gg("action")=="insertadd"){
 		$dd = new db;
 		$dd->dateArr["s_name"]=gp("s_name");
@@ -157,7 +155,7 @@ $list_arr = class_func();
     <tr><td width="11%">分类:</td><td width="89%">
     <select name="classid" id="classid">
     <?php foreach($list_arr as $k=>$v){?> 
-      <option value="<?php echo $v['id'];?>"<?php if($v['id']==gv('classid'))echo' selected="selected"';?>>├<?php for($i=1;$i<$v['class_depth'];$i++){echo'─';}?><?php echo $v['s_name'];?></option>
+      <option value="<?php echo $v['id'];?>"<?php if($v['id']==$rs['classid'])echo' selected="selected"';?>>├<?php for($i=1;$i<$v['class_depth'];$i++){echo'─';}?><?php echo $v['s_name'];?></option>
     <?php }?>
     </select>
     
@@ -271,15 +269,16 @@ $list_arr = class_func();
         <? if($gb=="1"){?>
         
         <tr><td width="11%">简要说明(摘要):</td><td width="89%">
+          <textarea style="height:auto;" name="s_conj" id="s_conj" cols="95" rows="4"><?=gv("s_conj")?></textarea>
           <?php
-            $s_conj=gv("s_conj");
-            $oFCKeditor = new FCKeditor('s_conj') ;//建立对象
-            $oFCKeditor->BasePath = '../FCKeditor/' ;//FCKeditor所在的位置
-            $oFCKeditor->ToolbarSet = 'Basic' ;//工具按钮
-			$oFCKeditor->Value = $s_conj;//初始值
-			$oFCKeditor->Height='150px';  //高度
-			$oFCKeditor->Width='780px';  //宽度
-            $oFCKeditor->Create('s_conj') ;
+   //          $s_conj=gv("s_conj");
+   //          $oFCKeditor = new FCKeditor('s_conj') ;//建立对象
+   //          $oFCKeditor->BasePath = '../FCKeditor/' ;//FCKeditor所在的位置
+   //          $oFCKeditor->ToolbarSet = 'Basic' ;//工具按钮
+			// $oFCKeditor->Value = $s_conj;//初始值
+			// $oFCKeditor->Height='150px';  //高度
+			// $oFCKeditor->Width='780px';  //宽度
+   //          $oFCKeditor->Create('s_conj') ;
            ?> 
           
           </td>

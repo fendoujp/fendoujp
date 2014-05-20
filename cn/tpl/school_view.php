@@ -1,7 +1,7 @@
-﻿<!--内容开始-->
+<!--内容开始-->
 <div class="center container slide-box">
   <?php if($first_info['s_img']!=""){?>
-  <div class="banner"><img src="<?php echo $first_info['s_img'];?>" width="958" height="auto" /></div>
+  <div class="banner"><img src="<?php echo $first_info['s_img'];?>" width="958" height="212" /></div>
   <div class="banner-bj"></div>
   <?php }?>
   <?php include(TPL_PATH."side.php");?>
@@ -16,7 +16,7 @@
               <dd class="shcool-photo"><img src="<?php echo $school_view['s_img'];?>" width="154" height="60" /></dd>
                 <dt class="shcool-deta"><?php echo $school_view['s_name'];?></dt>
             </dl>
-            <div class="shcool-info"><h2>学校联络处</h2><?php echo $school_view['s_conj'];?></div>
+            <div class="shcool-info"><h2>学校联络处</h2><p><?php echo nl2br($school_view['s_conj']);?></p></div>
         <div class="cl"></div>
     <div class="school-menu">
           <ul class="sc-title">
@@ -35,7 +35,7 @@
               $school_pic = getLiAll($sql);
               foreach($school_pic as $k=>$v){
               ?>
-                <li><a href="<?php echo $v['s_img'];?>" rel="clearbox[test1]" title="<?php echo $v['s_name'];?>"><img src="<?php echo $v['s_img'];?>" width="196" height="143" alt="<?php echo $v['s_name'];?>" /></a></li>
+                <li><a href="#" title="<?php echo $v['s_name'];?>"><img src="<?php echo $v['s_img'];?>" width="196" height="143" alt="<?php echo $v['s_name'];?>" /></a></li>
               <?php }?>
               </ul>
             </div>
@@ -47,4 +47,3 @@
   <div class="cl"></div>
 </div>
 <!--内容结束-->
-<SCRIPT src="/cn/js/clearbox.js" type="text/javascript"></SCRIPT>

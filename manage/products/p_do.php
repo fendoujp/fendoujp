@@ -155,7 +155,7 @@ $list_arr = class_func();
     <tr><td width="11%">分类:</td><td width="89%">
     <select name="classid" id="classid">
     <?php foreach($list_arr as $k=>$v){?> 
-      <option value="<?php echo $v['id'];?>"<?php if($v['id']==gv('classid'))echo' selected="selected"';?>>├<?php for($i=1;$i<$v['class_depth'];$i++){echo'─';}?><?php echo $v['s_name'];?></option>
+      <option value="<?php echo $v['id'];?>"<?php if($v['id']==$rs['classid'])echo' selected="selected"';?>>├<?php for($i=1;$i<$v['class_depth'];$i++){echo'─';}?><?php echo $v['s_name'];?></option>
     <?php }?> 
     </select>
     
@@ -270,22 +270,13 @@ $list_arr = class_func();
         <? }?>
         
    <? if($s_conj=="1"){?>     
-        <? if($gb=="1"){?>
+        <? //if($gb=="1"){?>
         
         <tr><td width="11%">简要说明:</td><td width="89%">
-           <?php
-            $s_conj=gv("s_conj");
-            $oFCKeditor = new FCKeditor('s_conj') ;//建立对象
-            $oFCKeditor->BasePath = '../FCKeditor/' ;//FCKeditor所在的位置
-            $oFCKeditor->ToolbarSet = 'Basic' ;//工具按钮
-			$oFCKeditor->Value = $s_conj;//初始值
-			$oFCKeditor->Height='150px';  //高度
-			$oFCKeditor->Width='780px';  //宽度
-            $oFCKeditor->Create('s_conj') ;
-           ?> 
+           <textarea style="height:auto;" name="s_conj" id="s_conj" cols="95" rows="4"><?=gv("s_conj")?></textarea>
           </td>
        </tr>
-       <? }?>
+       <? //}?>
        <? if($en=="1"){?>
          <tr><td width="11%">简要说明en:</td><td width="89%">
           

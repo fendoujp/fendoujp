@@ -4,6 +4,19 @@
 // | author:LMing
 // +--------------------------------------------
 /**
+ * GPC过滤，自动转义$_GET，$_POST，$_COOKIE中的特殊字符，防止SQL注入攻击
+ */
+function saddslashes($string){
+	if(is_array($string)){
+		foreach($string as $key => $val){
+			$string[$key] = saddslashes($val);
+		}
+	}else{
+		$string = addslashes($string);
+	}
+	return $string;
+}
+/**
  * 自动识别post get
  */
 function gets($text){
@@ -14,6 +27,10 @@ function gets($text){
 		if($text2 != ''){
 			$text1 = $text2;
 		}
+	}
+	//防止重复转义
+	if(!get_magic_quotes_gpc()){
+		$text1 = saddslashes($text1);
 	}
 	return $text1;
 }

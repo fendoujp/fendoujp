@@ -1,5 +1,18 @@
 <?php include("dataconfig.php"); ?>
 <?
+/**
+ * GPC过滤，自动转义$_GET，$_POST，$_COOKIE中的特殊字符，防止SQL注入攻击
+ */
+function ssaddslashes($string){
+	if(is_array($string)){
+		foreach($string as $key => $val){
+			$string[$key] = ssaddslashes($val);
+		}
+	}else{
+		$string = addslashes($string);
+	}
+	return $string;
+}
 function e($text){echo $text;}
 function en($text){	echo $text."<br/>";	}
 function ee($text){
@@ -18,20 +31,41 @@ function ej($text){
 }
 function gg($text){
 	if(isset($_GET[$text])){
-		return trim($_GET[$text]);
-	}else{return ("");}
+		$value = trim($_GET[$text]);
+	}else{
+		$value = "";
+	}
+
+	//防止重复转义
+	if(!get_magic_quotes_gpc()){
+		$value = ssaddslashes($value);
+	}
+	return $value;
 }
 function q($text){
 	if(isset($_REQUEST[$text])){
-		return trim($_REQUEST[$text]);
-	}else{return ("");}
+		$value = trim($_REQUEST[$text]);
+	}else{
+		$value = "";
+	}
+
+	//防止重复转义
+	if(!get_magic_quotes_gpc()){
+		$value = ssaddslashes($value);
+	}
+	return $value;
 }
 function gp($text){
 	if(isset($_POST[$text])){
-		return trim($_POST[$text]);
+		$value = trim($_POST[$text]);
 	}else{
-		return ("");
+		$value = "";
 	}
+	//防止重复转义
+	if(!get_magic_quotes_gpc()){
+		$value = ssaddslashes($value);
+	}
+	return $value;
 }
 function gpk($text){
 	if(isset($_POST[$text])){

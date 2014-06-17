@@ -64,28 +64,29 @@
 		$s_copyright2 = gp("s_copyright2");
 		$s_uploadset = gp("uploadset");
 		$id = gg("id");
+    if($id==""){$id=1;}
 	
 		$dd = new db;
 		$dd->dateArr["s_name"]=$s_name;
-		$dd->dateArr["s_name1"]=$s_name1;
-		$dd->dateArr["s_name2"]=$s_name2;
+		// $dd->dateArr["s_name1"]=$s_name1;
+		// $dd->dateArr["s_name2"]=$s_name2;
 		$dd->dateArr["s_keywords"]=$s_keywords;
-		$dd->dateArr["s_keywords1"]=$s_keywords1;
-		$dd->dateArr["s_keywords2"]=$s_keywords2;
-		$dd->dateArr["s_mail_user"]=$s_mail_user;
-		$dd->dateArr["s_mail_smtp"]=$s_mail_smtp;
-		$dd->dateArr["s_mail_pwd"]=$s_mail_pwd;
+		// $dd->dateArr["s_keywords1"]=$s_keywords1;
+		// $dd->dateArr["s_keywords2"]=$s_keywords2;
+		// $dd->dateArr["s_mail_user"]=$s_mail_user;
+		// $dd->dateArr["s_mail_smtp"]=$s_mail_smtp;
+		// $dd->dateArr["s_mail_pwd"]=$s_mail_pwd;
 		$dd->dateArr["s_copyright"]=$s_copyright;
-		$dd->dateArr["s_copyright1"]=$s_copyright1;
-		$dd->dateArr["s_copyright2"]=$s_copyright2;
+		// $dd->dateArr["s_copyright1"]=$s_copyright1;
+		// $dd->dateArr["s_copyright2"]=$s_copyright2;
 		
 		$dd->dateArr["s_description"]=$s_description;
-		$dd->dateArr["s_description1"]=$s_description1;
-		$dd->dateArr["s_description2"]=$s_description2;
-		$dd->dateArr["s_menustyle"]=$menustyle;
-		$dd->dateArr["s_uploadset"]=$s_uploadset;
-		$dd->dateArr["s_language"]=$s_language;
-		$dd->dateArr["s_count"]=$s_count;
+		// $dd->dateArr["s_description1"]=$s_description1;
+		// $dd->dateArr["s_description2"]=$s_description2;
+		// $dd->dateArr["s_menustyle"]=$menustyle;
+		// $dd->dateArr["s_uploadset"]=$s_uploadset;
+		// $dd->dateArr["s_language"]=$s_language;
+		// $dd->dateArr["s_count"]=$s_count;
 		$dd->phpUpdate("select * from web_config where id = ".$id."");
 		$dd->closeDb();
 		ee(js("location.href='".getSplit(getUrl(),"&action",0)."'"));

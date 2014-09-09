@@ -343,7 +343,7 @@ body {
 #slider #wai_box{height:142px;width:962px;overflow:hidden;position:relative;}
 #slider #wai_box .slider_box .title{font-family:"微软雅黑";font-size:14px;line-height:30px;color:#FFFFFF;display:none;height:30px;overflow:hidden;position:absolute;bottom:0px;z-index:30;width:158px;text-indent:1em;left:0px; text-align:center;background:rgba(000, 000, 000, 0.5);filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6B000000,endColorstr=#6B000000);}
 #slider #wai_box .slider_box .title a{color:#fff;}
-#slider .slider_box{width:2976px;position:absolute;left:0px;top:0px;}
+#slider .slider_box{position:absolute;left:0px;top:0px;}
 #slider .slider_box ul{float:left;height:142px;width:924px; margin-left:38px;}
 #slider .slider_box li{float:left;position:relative;width:158px;height:64px;overflow:hidden; border:1px solid #e0a672; margin-right:22px; margin-bottom:8px;}
 #slider .slider_box li img{ padding:2px; width:154px; height:60px; overflow:hidden}

@@ -212,7 +212,7 @@ foreach($subclass as $k=>$v){
     <div class="slider_box">
     <?php 
     foreach($hzyx_info as $k=>$v){
-      if($k==0 || ($k+1)%11==0) echo '<ul>';
+      if($k%10==0) echo '<ul>';
     ?>
         <li><a href="<?php echo cover_link(4,$v['id']);?>" class="images"><img src="<?php echo $v['s_img'];?>" alt="<?php echo $v['s_name'];?>" /></a><span class="title"><a href="<?php echo cover_link(4,$v['id']);?>" title="<?php echo $v['s_name'];?>"><?php echo str_cut($v['s_name'],9,'');?></a></span></li>
     <?php

@@ -92,7 +92,6 @@ $first_info = class_info($class_first);
     <?php foreach($qq as $v){?>
       <a class="top_qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $v['s_name1'];?>&site=qq&menu=yes"><?php echo $v['s_name'];?></a>
     <?php }?>
-    <iframe width="63" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" frameborder="No" border="0" src="http://widget.weibo.com/relationship/followbutton.php?width=63&amp;height=24&amp;uid=1568011864&amp;style=1&amp;btn=light&amp;dpc=1"></iframe>
     <!--<wb:follow-button uid="2991975565" type="red_2" width="104" height="24" ></wb:follow-button>-->
     </div>
     &nbsp;&nbsp;&nbsp;您好！欢迎您进入奋斗在日本留学网！

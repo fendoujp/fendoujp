@@ -194,7 +194,7 @@ foreach($subclass as $k=>$v){
   <h2><?php echo $rbly_class[0]['s_name'];?></h2><span class="photolis-more"><a href="<?php echo cover_link(1,$rbly_class[0]['id']);?>" title="<?php echo $rbly_class[0]['s_name'];?>">more&gt;&gt;</a></span>
     <?php foreach($rbly_info as $k=>$v){ $size = $k==0 ? ' width="291" height="230"':' width="135" height="90"';?>
     <dl class="list-street">
-      <dd class="street-photo"><a href="<?php echo cover_link(3,$v['id']);?>" title="<?php echo $v['s_name'];?>"><img src="<?php echo $v['s_img'];?>" alt="<?php echo $v['s_name'];?>" /></a></dd>
+      <dd class="street-photo"><a href="<?php echo cover_link(3,$v['id']);?>" title="<?php echo $v['s_name'];?>"><img src="<?php echo $v['s_img'];?>" alt="<?php echo $v['s_name'].'"'.$size;?>/></a></dd>
       <dt class="street-title"><a href="<?php echo cover_link(3,$v['id']);?>" title="<?php echo $v['s_name'];?>"><?php echo $v['s_name'];?></a></dt>
     </dl>
     <?php }?>

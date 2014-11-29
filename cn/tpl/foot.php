@@ -62,16 +62,6 @@ function wwdresize(){
 
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F396c562776f414444aec2720f9a2f21d' type='text/javascript'%3E%3C/script%3E"));
-</script>
-
-
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa1ec215a9bbdba8041ff74b82d27231d' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2905d3a05e29317306cd014d7baedbda' type='text/javascript'%3E%3C/script%3E"));
 </script>
 </body>

@@ -48,6 +48,7 @@ minify -o /fendoujp/assets/front/minify/minify.js \
         /fendoujp/assets/front/js/main.js \
         /fendoujp/assets/front/js/color-settings.js
 
+cp -rf /fendoujp/assets/* /assets &
 crond &
 
 php -S 0.0.0.0:80

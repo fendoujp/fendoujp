@@ -2,16 +2,16 @@
     "use strict";
 
     jQuery(document).ready(function ($) {
-    	//微信分享消失 	
-    	$("#chat_tips_btn").on('click',function(){    		
+    	//微信分享消失
+    	$("#chat_tips_btn").on('click',function(){
     		$("#chat_tips").show();
     	});
     	$("#chat_tips").on('click',function(){
 	  		$(this).fadeOut();
     	});
-    	
+
         //Activated Testimonial Carousel
-        
+
         $('.testimonial-active').owlCarousel({
             items: 3,
             margin: 30,
@@ -34,7 +34,7 @@
         });
 
         //Activated Clients Logo Carousel
-        
+
         $('.clients-active').owlCarousel({
             items: 6,
             margin: 40,
@@ -43,7 +43,7 @@
             autoplaySpeed: 3000,
             loop: true,
             responsive: {
-                992: {                	
+                992: {
                     item: 4
                 },
                 768: {
@@ -57,12 +57,12 @@
                 320: {
                     items: 1
                 }
-                
+
             }
         });
 
         //Activated Gallery Photos Carousel
-        
+
         $('.gallery-wrap').owlCarousel({
             items: 1,
             autoplay: true,
@@ -72,7 +72,7 @@
         });
 
         //Activated Testimonial Widget Carousel
-        
+
         $('.widget-testimonial').owlCarousel({
             items: 1,
             autoplay: true,
@@ -82,7 +82,7 @@
         });
 
         //Activated Main Slider
-        
+
         $(".Modern-Slider").slick({
             autoplay: true,
             autoplaySpeed: 10000,
@@ -100,7 +100,7 @@
         });
 
         //Accordion JS
-        
+
         var dd = $('dd');
         dd.filter(':nth-child(n+4)').hide();
         $('dl.accordion').on('click', 'dt', function () {
@@ -118,20 +118,20 @@
         });
 
         //Activated jQuery LightBox PrettyPhoto
-        
+
         $('.light-box').prettyPhoto({'social_tools':""});
 
         //Activated jQuery CounterUp
-        
+
         $('.counter').counterUp({
             delay: 10,
             time: 5000
         });
 
         //MobileMenu Activated
-        
+
         $('.mainmenu-area nav').meanmenu();
-        
+
         // Sticky Menu
         $(function(){
             $(window).scroll(function() {
@@ -143,7 +143,7 @@
                 }
             });
         });
-        
+
         // Sticky Menu Mobile
         $(function(){
             $(window).scroll(function() {
@@ -158,14 +158,14 @@
 
 
         // preloader
-        
-        $(window).load(function () {
+
+        // $(window).load(function () {
             $('body').css('overflow-y', 'visible');
             $('#preloader').fadeOut('slow', function () {
                 $(this).remove();
             });
-        });
-        
+        // });
+
         $(".head-bottom-area").sticky({topSpacing:0});
 
     });

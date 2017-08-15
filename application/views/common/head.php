@@ -19,45 +19,41 @@
   } else {
     $assetsPath = func::res_url()."assets/front/css/";
   ?>
-	<!-- GOOGLE FONTS
-    <link href='<?php echo func::res_url()?>assets/front/css/googlefont.css' rel='stylesheet' type='text/css'>
-	-->
-
     <!-- BOOTSTRAP CSS -->
-    <link href="<?php echo $assetsPath?>bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IcoFont CSS -->
-    <link href="<?php echo $assetsPath?>icofont.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/icofont.css" rel="stylesheet">
 
     <!-- FontAwesome Css -->
-    <link href="<?php echo $assetsPath?>font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- OWL CAROUSEL CSS -->
-    <link href="<?php echo $assetsPath?>owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/owl.carousel.css" rel="stylesheet">
 
     <!-- ANIMATE CSS -->
-    <link href="<?php echo $assetsPath?>animate.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/animate.css" rel="stylesheet">
 
     <!-- Mobile Menu Css -->
-    <link href="<?php echo $assetsPath?>meanmenu.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/meanmenu.css" rel="stylesheet">
 
     <!-- PrettyPhoto CSS -->
-    <link href="<?php echo $assetsPath?>prettyPhoto.css" rel="stylesheet">
-
-    <!-- STYLE CSS -->
-    <link href="<?php echo $assetsPath?>style.css" rel="stylesheet">
-
-    <!-- RESPONSIVE CSS -->
-    <link href="<?php echo $assetsPath?>responsive.css" rel="stylesheet">
-
-	   <!-- 悬浮窗 Css -->
-    <link href="<?php echo func::res_url()?>assets/front/css/gdt-style.css" rel="stylesheet">
+    <link href="<?php echo func::res_url()?>assets/front/css/prettyPhoto.css" rel="stylesheet">
 
     <!-- DIRECTORY FONT -->
     <link href="<?php echo func::res_url()?>assets/front/font/stylesheet.css" rel="stylesheet">
-    
+
+    <!-- STYLE CSS -->
+    <link href="<?php echo func::res_url()?>assets/front/css/style.css" rel="stylesheet">
+
+    <!-- RESPONSIVE CSS -->
+    <link href="<?php echo func::res_url()?>assets/front/css/responsive.css" rel="stylesheet">
+
     <!-- Child Css -->
     <link href="<?php echo func::res_url()?>assets/front/css/child/factory.css" rel="stylesheet">
+
+	   <!-- 悬浮窗 Css -->
+    <link href="<?php echo func::res_url()?>assets/front/css/gdt-style.css" rel="stylesheet">
   <?php } ?>
 
     <!--[if lt IE 9]>

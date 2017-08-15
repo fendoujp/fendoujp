@@ -21,9 +21,20 @@ if [[ ! -d /fendoujp/assets/front/minify ]]; then
 fi
 
 minify -o /fendoujp/assets/front/minify/minify.css \
-        /fendoujp/assets/front/css/ \
+        /fendoujp/assets/front/css/bootstrap.min.css \
+        /fendoujp/assets/front/css/icofont.css \
+        /fendoujp/assets/front/css/font-awesome.min.css \
+        /fendoujp/assets/front/css/owl.carousel.css \
+        /fendoujp/assets/front/css/animate.css \
+        /fendoujp/assets/front/css/meanmenu.css \
+        /fendoujp/assets/front/css/prettyPhoto.css \
+        /fendoujp/assets/front/font/stylesheet.css \
+        /fendoujp/assets/front/css/style.css \
+        /fendoujp/assets/front/css/responsive.css \
         /fendoujp/assets/front/css/child/factory.css \
-        /fendoujp/assets/front/font/stylesheet.css
+        /fendoujp/assets/front/css/gdt-style.css
+
+
 minify -o /fendoujp/assets/front/minify/minify.js \
         /fendoujp/assets/front/js/jquery.min.js \
         /fendoujp/assets/front/js/jquery.meanmenu.js \

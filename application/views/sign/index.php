@@ -6,8 +6,8 @@
 <!-- content start -->
 
 	<?php include VIEWPATH.'common/page_title.php'; ?>
-	
-    
+
+
     <div class="contact-area">
         <div class="container">
             <div class="row no-padding">
@@ -40,10 +40,13 @@
                     			<input type="text" value="护照号码" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:70%">
-                                <input type="text" id="passport" placeholder="请输入护照号码">
+                                <input type="text" id="passport" placeholder="请输入护照号码"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入护照号码')"
+													      required>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-4 col-sm-6 col-xs-6 no-padding">
                         	<div class="input-tip" style="width:30%">
                     			<input type="text" value="性别" disabled>
@@ -59,7 +62,7 @@
 								</select>
 	                        </div>
                         </div>
-                        
+
                         <div class="col-md-4 col-sm-6 col-xs-6 no-padding">
                         	<div class="input-tip" style="width:40%">
                     			<input type="text" value="申请者现状" disabled>
@@ -105,14 +108,17 @@
 	                                <?php }?>
 								</select>
 							</div>
-                        </div>   
-                        
+                        </div>
+
                         <div class="col-md-3 col-sm-6 col-xs-6 no-padding">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="出生省份" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="birth_province" placeholder="请输入出生省份">
+                                <input type="text" id="birth_province" placeholder="请输入出生省份"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入出生省份')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -120,7 +126,10 @@
                     			<input type="text" value="出生城市" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="birth_city" placeholder="请输入出生城市">
+                                <input type="text" id="birth_city" placeholder="请输入出生城市"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入出生城市')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -147,13 +156,16 @@
                                 <input type="text" id="address" placeholder="请输入现住地址">
                             </div>
                     	</div>
-                    	
+
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="父亲姓名" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="dad_name" placeholder="请输入父亲姓名">
+                                <input type="text" id="dad_name" placeholder="请输入父亲姓名"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入父亲姓名')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -161,7 +173,10 @@
                     			<input type="text" value="父亲年龄" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="dad_age" placeholder="请输入父亲年龄">
+                                <input type="text" id="dad_age" placeholder="请输入父亲年龄"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入父亲年龄')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -169,7 +184,10 @@
                     			<input type="text" value="母亲姓名" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="mom_name" placeholder="请输入母亲姓名">
+                                <input type="text" id="mom_name" placeholder="请输入母亲姓名"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入母亲姓名')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -177,10 +195,13 @@
                     			<input type="text" value="母亲年龄" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="mom_age" placeholder="请输入母亲年龄">
+                                <input type="text" id="mom_age" placeholder="请输入母亲年龄"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入母亲年龄')"
+													      required>
                             </div>
                     	</div>
-                    	
+
                     	<div class="col-md-6 col-sm-6 col-xs-6 no-padding">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="经费支付者姓名" disabled>
@@ -212,7 +233,7 @@
                     		<div class="sin-input2" style="width:60%">
                                 <input type="text" id="payer_income" placeholder="请输入经费支付者年收">
                             </div>
-                    	</div>     
+                    	</div>
                         <div class="col-md-3 col-sm-6 col-xs-6 no-padding">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="手机" disabled>
@@ -226,7 +247,10 @@
                     			<input type="text" value="固定电话" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="telphone" placeholder="请输入固定电话">
+                                <input type="text" id="telphone" placeholder="请输入固定电话"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入固定电话')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-3 col-sm-6 col-xs-6 no-padding">
@@ -250,10 +274,13 @@
                     			<input type="text" value="邮箱" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:90%">
-                                <input type="text" id="email" placeholder="请输入邮箱">
+                                <input type="text" id="email" placeholder="请输入邮箱"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入邮箱')"
+													      required>
                             </div>
                     	</div>
-                    	
+
                     	<div class="col-md-4 col-sm-6 col-xs-6 no-padding">
                         	<div class="input-tip" style="width:40%">
                     			<input type="text" value="是否来过日本" disabled>
@@ -269,16 +296,16 @@
 								</select>
 	                        </div>
                         </div>
-                        <div class="col-md-8 col-sm-12 col-xs-12 no-padding" 
+                        <div class="col-md-8 col-sm-12 col-xs-12 no-padding"
                         id="come_japan_intro_div" style="display:none">
                     		<div class="input-tip" style="width:20%">
                     			<input type="text" value="赴日经历" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:80%">
-                                <input type="text" id="come_japan_intro" 
+                                <input type="text" id="come_japan_intro"
                                 placeholder="如果来过日本,请输入来日本的时间和相关理由">
                             </div>
-                    	</div>                    	
+                    	</div>
                     	<div class="col-md-4 col-sm-6 col-xs-6 no-padding" style="clear:both">
                         	<div class="input-tip" style="width:40%">
                     			<input type="text" value="是否学过日语" disabled>
@@ -294,13 +321,13 @@
 								</select>
 	                        </div>
                         </div>
-                        <div class="col-md-8 col-sm-12 col-xs-12 no-padding" 
+                        <div class="col-md-8 col-sm-12 col-xs-12 no-padding"
                         id="learn_japanese_div" style="display:none">
                     		<div class="input-tip" style="width:20%">
                     			<input type="text" value="学习经历" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:80%">
-                                <input type="text" id="learn_japanese_intro" 
+                                <input type="text" id="learn_japanese_intro"
                                 placeholder="如果学过日语,请输入学习日语的时间和学校名称(或学习方式)">
                             </div>
                     	</div>
@@ -319,7 +346,7 @@
 								</select>
 	                        </div>
                         </div>
-                        
+
                         <div class="col-md-8 col-sm-6 col-xs-6 no-padding test-japanese-div">
                         	<div class="input-tip" style="width:40%">
                     			<input type="text" value="考试时间" disabled>
@@ -367,13 +394,13 @@
 								</select>
 	                        </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 no-padding test-japanese-div" 
+                        <div class="col-md-4 col-sm-6 col-xs-6 no-padding test-japanese-div"
                         id="learn_japanese_div" style="display:">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="考试分数" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="test_japanese_point" 
+                                <input type="text" id="test_japanese_point"
                                 placeholder="请输入考试分数">
                             </div>
                     	</div>
@@ -382,7 +409,7 @@
                     			<input type="text" value="高中学校名" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="highschool_name" 
+                                <input type="text" id="highschool_name"
                                 placeholder="请输入高中学校名">
                             </div>
                     	</div>
@@ -406,7 +433,7 @@
                     			<input type="text" value="高考成绩" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="highschool_point" 
+                                <input type="text" id="highschool_point"
                                 placeholder="请输入高考成绩">
                             </div>
                     	</div>
@@ -432,13 +459,13 @@
 								</select>
 							</div>
                         </div>
-                    	
+
                     	<div class="col-md-6 col-sm-6 col-xs-6 no-padding" style="clear:both">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="大学/大专名" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="collage_name" 
+                                <input type="text" id="collage_name"
                                 placeholder="请输入学校名(*非必填)">
                             </div>
                     	</div>
@@ -447,7 +474,7 @@
                     			<input type="text" value="所学专业" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="collage_class" 
+                                <input type="text" id="collage_class"
                                 placeholder="请输入所学专业(*非必填)">
                             </div>
                     	</div>
@@ -503,14 +530,17 @@
 								</select>
 							</div>
                         </div>
-                        
+
                         <div class="col-md-6 col-sm-6 col-xs-6 no-padding"  style="clear:left">
                     		<div class="input-tip" style="width:40%">
                     			<input type="text" value="希望申请的学校" disabled>
                     		</div>
                     		<div class="sin-input2" style="width:60%">
-                                <input type="text" id="apply_school" 
-                                placeholder="请输入希望申请的学校">
+                                <input type="text" id="apply_school"
+                                placeholder="请输入希望申请的学校"
+																pattern=".{1,}"
+													      oninvalid="setCustomValidity('请输入希望申请的学校')"
+													      required>
                             </div>
                     	</div>
                     	<div class="col-md-6 col-sm-6 col-xs-6 no-padding">
@@ -518,7 +548,9 @@
                     			<input type="text" value="希望入学时间" disabled>
                     		</div>
                         	<div class="sin-input2 select-box2 no-padding" style="width:30%;">
-	                        	<select id="apply_year" style="border-right:none">
+	                        	<select id="apply_year" style="border-right:none"
+														oninvalid="setCustomValidity('希望入学时间')"
+														required>
 									<option value="0">请选择年</option>
 									<?php for($i=2017;$i<=2030;$i++){?>
 									<option value="<?php echo $i?>"><?php echo $i?>年</option>
@@ -536,10 +568,10 @@
 							</div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12">
-	                        <input type="submit" id="submit" value="提 交 申 请" 
+	                        <input type="submit" id="submit" value="提 交 申 请"
 	                        style="font-size:16px;font-weight:600;color:#fff;background-color:#213140">
                         </div>
-                    	
+
                     </div>
                 </div>
             </div>
@@ -547,7 +579,7 @@
     </div>
 
 
-<!-- content end -->	
+<!-- content end -->
 <?php include VIEWPATH.'common/footer.php'?>
 
 <?php include VIEWPATH.'common/foot.php'?>
@@ -555,4 +587,3 @@
 <?php include JSPATH.$route['con'].DIR.$route['fun'].'.php'?>
 </body>
 </html>
-

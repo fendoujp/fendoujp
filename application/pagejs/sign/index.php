@@ -1,5 +1,5 @@
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
 	//是否来过日本 选择框
 	$("#ever_come_japan").change(function(){
 		var v = $(this).val();
@@ -34,22 +34,22 @@ $(document).ready(function(){
 		if(v == 1){
 			<?php $options = consts::get_const_test_japanese_level(1)?>
 			options += '<?php foreach($options as $k=>$v){
-								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>'; 
+								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>';
 						}?>';
 		}else if(v == 2){
 			<?php $options = consts::get_const_test_japanese_level(2)?>
 			options += '<?php foreach($options as $k=>$v){
-								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>'; 
+								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>';
 						}?>';
 		}else if(v == 3){
 			<?php $options = consts::get_const_test_japanese_level(3)?>
 			options += '<?php foreach($options as $k=>$v){
-								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>'; 
+								echo '<option value="'.$v['value'].'">'.$v['text'].'</option>';
 						}?>';
 		}
-		$("#test_japanese_level").html(options);		
+		$("#test_japanese_level").html(options);
 	});
-	
+
 	//点击提交报名
 	$("#submit").click(function(){
 		//检查保存标志
@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 		$('#ar').val(1);//修改标志位
 		$(this).val('提 交 中  ...');//修改标志位
-		
+
 		var data = {};
 		data.name = $("#name").val();
 		data.passport = $("#passport").val();
@@ -110,10 +110,10 @@ $(document).ready(function(){
 		data.apply_year = $("#apply_year").val();
 		data.apply_month = $("#apply_month").val();
 		data.token = '<?php echo $token?>';
-		//式样初始化		
+		//式样初始化
 		$.each(data,function(k,v){
 			$("#"+k).attr('style','');
-		});	
+		});
 		console.log(data);
 		//ajax保存
 		$.ajax({
@@ -133,7 +133,7 @@ $(document).ready(function(){
 					$.each(error,function(k,v){
 						//如果是一般错误直接显示
 						if(k != 'token'){
-							$("#"+k).attr('style','border:1px solid #FFCCCC');
+							$("#"+k).attr('style','border:3px solid #FFCCCC');
 						}else{
 							//如果是Token错误 提示网页过期并且重新刷新网页
 							$("#submit").val('网页已过期,请刷新重试');
@@ -146,6 +146,6 @@ $(document).ready(function(){
 	        	$("#submit").val('提交失败,服务器发生错误');
 	        }
 	    });
-	});	
+	});
 });
 </script>

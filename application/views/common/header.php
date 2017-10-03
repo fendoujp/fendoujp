@@ -1,5 +1,4 @@
 <input type="hidden" id="ar" value=0 >
-<div id="preloader"></div>
     <header class="header-area">
         <div class="head-top-area" style="padding-bottom: 20px;padding-top:20px;">
             <div class="container">

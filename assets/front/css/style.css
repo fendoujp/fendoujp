@@ -2442,23 +2442,3 @@ a.author,
 	margin:0;
 	padding:0;
 }
-
-/*
---------------------------
-+ Preloader Css
---------------------------
-*/
-
-div#preloader {
-    overflow: hidden;
-    background-color: #ecf0f1;
-    background-image: url(../img/preLoader.gif);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}

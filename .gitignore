@@ -5,3 +5,5 @@ upload/*/*.jpg
 upload/*/*.png
 upload/*/*.gif
 assets/front/minify
+
+dump.sql

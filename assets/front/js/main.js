@@ -155,17 +155,6 @@
                 }
             });
         });
-
-
-        // preloader
-
-        // $(window).load(function () {
-            $('body').css('overflow-y', 'visible');
-            $('#preloader').fadeOut('slow', function () {
-                $(this).remove();
-            });
-        // });
-
         $(".head-bottom-area").sticky({topSpacing:0});
 
     });

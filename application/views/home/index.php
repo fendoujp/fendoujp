@@ -9,7 +9,7 @@
         <div class="Modern-Slider">
         	<?php foreach($top_banner as $k=>$v){ ?>
         	<!-- Item -->
-            <div class="item">
+            <div class="item" <?php echo $k==1? 'style="opacity: 0;"': '';?>>
                 <div class="img-fill">
                     <img src="<?php echo $v['top_banner_img']?>" alt="">
                     <div class="slider-text overlay">
